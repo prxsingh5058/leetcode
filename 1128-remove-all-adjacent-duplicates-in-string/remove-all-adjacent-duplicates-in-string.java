@@ -5,11 +5,11 @@ class Solution {
 
         for(char c : s.toCharArray()) {
 
-            if(st.isEmpty() || st.peek() != c) {
-                st.push(c);
+            if(!st.isEmpty() && st.peek() == c) {
+                st.pop();
             }
             else {
-                st.pop();
+                st.push(c);
             }
         }
 
